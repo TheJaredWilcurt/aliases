@@ -1,4 +1,4 @@
-: Usage: master my-branch-name
+: Use: master my-branch-name
 
 @echo off
 
@@ -6,15 +6,19 @@
 IF NOT "%1"=="" (
     : Store the argument in a variable named "branch"
     SET branch=%1
+) ELSE (
+    SET branch=""
 )
 
 : Change to master, pull latest
 git checkout master && git pull origin master && git pull origin && git pull && git fetch
 
 : If a branch name was passed in
-IF NOT "branch"=="" (
+IF NOT %branch%=="" (
     : Store the argument in a variable named "branch"
     git checkout %branch% && git pull origin %branch%
 )
+
+git branch
 
 @echo on
