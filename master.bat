@@ -7,6 +7,7 @@ IF NOT "%1"=="" (
     : Store the argument in a variable named "branch"
     SET branch=%1
 ) ELSE (
+    : Else, clear the variable
     SET branch=""
 )
 
