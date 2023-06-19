@@ -11,7 +11,7 @@ IF NOT "%1"=="" (
     SET branch=""
 )
 
-: Change to master, pull latest
+: Change to main, pull latest
 git checkout main && git pull origin main && git pull origin && git pull && git fetch
 
 : If a branch name was passed in
