@@ -16,7 +16,7 @@ git checkout main && git pull origin main && git pull origin && git pull && git 
 
 : If a branch name was passed in
 IF NOT %branch%=="" (
-    : switch to the desired branch and pull latest
+    : Switch to the desired branch and pull latest
     git checkout %branch% && git pull origin %branch%
 )
 
