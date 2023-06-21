@@ -2,8 +2,6 @@
 
 # Use: main my-branch-name
 
-# Chat-GPT converted main.bat over to this
-
 # If an argument is passed in
 if [ ! -z "$1" ]
 then
