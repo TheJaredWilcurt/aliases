@@ -12,12 +12,12 @@ IF NOT "%1"=="" (
 )
 
 : Change to master, pull latest
-git checkout master && git pull origin master && git pull origin && git pull && git fetch
+git checkout master && git pull origin master --no-edit && git pull origin --no-edit && git pull --no-edit && git fetch
 
 : If a branch name was passed in
 IF NOT %branch%=="" (
     : Switch to the desired branch and pull latest
-    git checkout %branch% && git pull origin %branch%
+    git checkout %branch% && git pull origin %branch% --no-edit
 )
 
 git branch
