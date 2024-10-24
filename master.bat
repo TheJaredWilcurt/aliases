@@ -11,12 +11,12 @@ IF NOT "%1"=="" (
     SET branch=""
 )
 
-: Change to master, pull latest
+: Change to master, pull latest, do not open the default editor
 git checkout master && git pull origin master --no-edit && git pull origin --no-edit && git pull --no-edit && git fetch
 
 : If a branch name was passed in
 IF NOT %branch%=="" (
-    : Switch to the desired branch and pull latest
+    : Switch to the desired branch and pull latest, do not open the default editor
     git checkout %branch% && git pull origin %branch% --no-edit
 )
 
