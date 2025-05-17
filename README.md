@@ -16,7 +16,17 @@ Other stuff to put in that file:
 
 ```sh
 export PATH="$HOME/GitHub/aliases:$PATH"
+
+rd() {
+  if [[ "$1" == "/s" && "$2" == "/q" && -n "$3" ]]; then
+    rm -rf "$3"
+  else
+    echo "Usage: rd /s /q <path>"
+  fi
+}
+
 alias dir='ls'
+alias del='rm'
 alias explorer='nautilus'
 alias cd..='cd ..'
 alias cls='clear'
