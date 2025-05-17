@@ -25,7 +25,7 @@ rd() {
   fi
 }
 
-alias dir='ls'
+alias dir='ls -l'
 alias del='rm'
 alias explorer='nautilus'
 alias cd..='cd ..'
