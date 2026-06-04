@@ -1,0 +1,7 @@
+( speaker-test -t sine -f 610 )& pid=$! ;
+sleep 0.1s ;
+kill -9 $pid ;
+sleep 0.2s ;
+( speaker-test -t sine -f 610  0 )& pid2=$! ;
+sleep 0.1s ;
+kill -9 $pid2
